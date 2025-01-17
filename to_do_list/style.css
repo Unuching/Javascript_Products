@@ -1,6 +1,13 @@
 body {
-  background-color: #727D73;
+  background-color: #727d73;
 }
-h1{
-    color: azure;
+h1 {
+  color: azure;
+  text-align: center;
+}
+.main_container {
+  width: 200px;
+  height: 400px;
+  background-color: aqua;
+  border-radius: 5px;
 }
