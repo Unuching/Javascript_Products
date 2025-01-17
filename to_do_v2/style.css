@@ -1,6 +1,6 @@
 :root {
   --background: #101114;
-  --primar-color: #1c1d20;
+  --primary-color: #1c1d20;
   --secondary-color: #4a4d57;
   --accent-color: #00ffc4;
   --text-color: #f9f9f9;
@@ -72,4 +72,58 @@ form {
   font-weight: 600;
   counter-reset: var(--background);
   cursor: pointer;
+}
+.todo {
+  margin-bottom: 10px;
+  padding: 0 16px;
+  background-color: var(--primary-color);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+.todo .todo_text {
+  padding: 15px;
+  padding-right: 0;
+  flex-grow: 1;
+  transition: 200ms ease;
+}
+.delete_button {
+  padding: 3px;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.delete_button:hover svg {
+  transition: 200ms ease;
+}
+.delete_button:hover svg {
+  fill: #ff0033;
+}
+.custom_checkbox {
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  min-height: 20px;
+  min-width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  transition: 200ms ease;
+  cursor: pointer;
+}
+input[type="checkbox"]:checked ~ .custom_checkbox {
+  background-color: var(--accent-color);
+}
+input[type="checkbox"]:checked ~ .custom_checkbox svg {
+  fill: var(--primary-color);
+}
+input[type="checkbox"]:checked ~ .todo_text {
+  text-decoration: line-through;
+  color: var(--secondary-color);
+}
+input[type="checkbox"] {
+  display: none;
 }
