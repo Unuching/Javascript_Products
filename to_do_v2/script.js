@@ -1,6 +1,6 @@
 const todoForm = document.querySelector("form");
 const todoInput = document.getElementById("todo_input");
-const rodoList = document.getElementById("todo_list");
+const todoList = document.getElementById("todo_list");
 
 let alltodos = [];
 todoForm.addEventListener("submit", function (e) {
@@ -15,6 +15,8 @@ function addtodo() {
     todoInput.value = "";
   }
 }
-function createtodoitem(todo){
-
+function createtodoitem(todo) {
+  const todoLi = document.createElement("li");
+  todoLi.innerText = todo;
+  todoList.append(todoLi)
 }
